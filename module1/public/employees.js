@@ -9,10 +9,11 @@ let rosemary = 'Rosemary To';
 let leslie = 'Leslie Mann';
 let john = 'John George';
 let james = 'James Dean';
+let shannon = 'Shannon Grace';
 const element = /*#__PURE__*/React.createElement("ul", {
   style: {
     'color': 'blue',
     'fontSize': '24px'
   }
-}, /*#__PURE__*/React.createElement("li", null, zak), /*#__PURE__*/React.createElement("li", null, sally), /*#__PURE__*/React.createElement("li", null, holly), /*#__PURE__*/React.createElement("li", null, amol), /*#__PURE__*/React.createElement("li", null, robin), /*#__PURE__*/React.createElement("li", null, aaron), /*#__PURE__*/React.createElement("li", null, rosemary), /*#__PURE__*/React.createElement("li", null, leslie), /*#__PURE__*/React.createElement("li", null, john), /*#__PURE__*/React.createElement("li", null, james));
+}, /*#__PURE__*/React.createElement("li", null, zak), /*#__PURE__*/React.createElement("li", null, sally), /*#__PURE__*/React.createElement("li", null, holly), /*#__PURE__*/React.createElement("li", null, amol), /*#__PURE__*/React.createElement("li", null, robin), /*#__PURE__*/React.createElement("li", null, aaron), /*#__PURE__*/React.createElement("li", null, rosemary), /*#__PURE__*/React.createElement("li", null, leslie), /*#__PURE__*/React.createElement("li", null, john), /*#__PURE__*/React.createElement("li", null, james), /*#__PURE__*/React.createElement("li", null, shannon));
 ReactDOM.render(element, document.getElementById('content'));

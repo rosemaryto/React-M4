@@ -9,7 +9,6 @@
   let leslie = 'Leslie Mann'
   let john = 'John George'
   let james = 'James Dean'
-  let shannon = 'Shannon Grace'
   const element = (
       <ul style={{'color': 'blue', 'fontSize': '24px'}}>
           <li>{zak}</li>
@@ -22,7 +21,6 @@
           <li>{leslie}</li>
           <li>{john}</li>
           <li>{james}</li>
-          <li>{shannon}</li>
       </ul>
       )
       ReactDOM.render(element,document.getElementById('content'))
