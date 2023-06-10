@@ -1,4 +1,5 @@
 import React from 'react'
+import { Badge } from 'react-bootstrap'
 import { useLocation, Link } from 'react-router-dom'
 import EmployeeAdd from './EmployeeAdd.jsx'
 import EmployeeFilter from './EmployeeFilter.jsx'
@@ -112,7 +113,7 @@ export default class EmployeeList extends React.Component {
     render() {
         return (
             <React.Fragment>
-                    <h1>Employee Management Application</h1>
+                    <h1><Badge bg="secondary">Employee Management Application</Badge></h1>
                     <EmployeeFilter />
                     <hr />
                     <EmployeeTable employees={this.state.employees} deleteEmployee={this.deleteEmployee}/>
