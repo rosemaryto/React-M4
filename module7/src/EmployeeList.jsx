@@ -1,5 +1,5 @@
 import React from 'react'
-import { Badge, Button, Table } from 'react-bootstrap'
+import { Badge, Button, Table, Card } from 'react-bootstrap'
 import { useLocation, Link } from 'react-router-dom'
 import EmployeeAdd from './EmployeeAdd.jsx'
 import EmployeeFilter from './EmployeeFilter.jsx'
@@ -23,22 +23,24 @@ function EmployeeTable(props) {
         deleteEmployee={props.deleteEmployee} />)
 
     return (
-        <Table striped size="sm">        
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Extension</th>
-                    <th>Email</th>
-                    <th>Title</th>
-                    <th>Date Hired</th>
-                    <th>Currently Employed?</th>
-                    <th>Delete Employee</th>
-                </tr>
-            </thead>
-            <tbody>
-                {employeeRows}
-            </tbody>
-        </Table>
+        <Card>
+            <Table striped size="sm">        
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Extension</th>
+                        <th>Email</th>
+                        <th>Title</th>
+                        <th>Date Hired</th>
+                        <th>Currently Employed?</th>
+                        <th>Delete Employee</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {employeeRows}
+                </tbody>
+            </Table>
+        </Card>
     )
 }
 
@@ -111,7 +113,6 @@ export default class EmployeeList extends React.Component {
     render() {
         return (
             <React.Fragment>
-                    <h1><Badge bg="secondary">Employee Management Application</Badge></h1>
                     <EmployeeFilter />
                     <hr />
                     <EmployeeTable employees={this.state.employees} deleteEmployee={this.deleteEmployee}/>
