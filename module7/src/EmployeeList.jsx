@@ -60,7 +60,7 @@ class EmployeeRow extends React.Component {
         this.toggleModal = this.toggleModal.bind(this)
     }
     toggleModal () {
-        !this.state.modalVisible
+        !this.state.modalToggle
     }
     onDeleteClick() {
         this.deleteEmployee(this.employee._id)
