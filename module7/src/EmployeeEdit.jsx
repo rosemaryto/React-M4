@@ -1,12 +1,17 @@
 // import { response } from 'express'
 // import React from 'react'
-// import { Badge,Button } from 'react-bootstrap'
+// import { Badge,Button,Card, Container, Row , Col, Alert } from 'react-bootstrap'
 // import { useParams } from 'react-router-dom'
 
 // export default class EmployeeEdit extends React.Component {
 //     constructor() {
 //         super()
-//         this.state = {employee: []}
+//         this.state = {
+//             employee: [],
+//             alertVisible: false,
+//             alertColor: 'success',
+//             alertMessage: '',
+//         }
 //         this.handleSubmit = this.handleSubmit.bind(this)
 //     }
 
@@ -39,7 +44,7 @@
 //         fetch(url, {
 //             method: 'PATCH',
 //             headers: {
-//                 'Accept': 'application/',
+//                 'Accept': 'application/json',
 //                 'Content-Type': 'application/json;charset=UTF-8',
 //             },
 //             body: JSON.stringify({
@@ -52,14 +57,21 @@
 //         })
 //         .then(response => response.json())
 //         .then(data => {
-//             document.getElementById('message').innerHTML = data.msg
+//             this.setState({
+//                 alertVisible: true,
+//                 alertMessage: data.msg,
+//             })
 //         })
 //     }
 
 //     render() {
 //         return (
+//             <Card>
+//             <Card.Header as="h5">Edit {this.state.employee.name}</Card.Header>
+//             <Card.Body>
+//             <Card.Text>
+//                 <Container fluid>
 //             <form action="employeeUpdate" onSubmit={this.handleSubmit}>
-//                 <h1>Edit {this.state.employee.name}</h1>
 //                 ID:<br/>
 //                 <input type="text" name="id" readOnly="readOnly" defaultValue={this.state.employee.id} /><br/>
 //                 Name:<br/>
@@ -74,9 +86,15 @@
 //                 <input type="text" name="dateHired" readOnly="readOnly" defaultValue={this.state.employee.dateHired} /><br/>
 //                 Currently Employed:<br/>
 //                 <input type="text" name="extension" defaultValue={this.state.employee.currentlyEmployed} /><br/>
-//                 <Button type="submit" variant="primary" size="sm">Update Employee</Button>
-//                 <p id="message"></p>
+//                 <Button type="submit" variant="primary" size="sm" className="my-3">Update Employee</Button>
+//                 <Alert 
+//                 variant={this.state.alertColor} show={this.state.alertVisible} onClose={() => this.setState({alertVisible: false})} dismissible>{this.state.alertMessage}
+//                 </Alert>
 //             </form>
+//             </Container>
+//             </Card.Text>
+//             </Card.Body>
+//         </Card>
 //         )
 //     }
 // }
